@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imóveis de Alto Padrão no Tatuapé | Fabiana Bettoni</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 90vh;
+        }
+        
+        .floating-btn {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .floating-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+        }
+        
+        .feature-icon {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .testimonial-card {
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: """;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 80px;
+            color: rgba(214, 180, 108, 0.2);
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .property-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .property-card {
+            transition: all 0.3s ease;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #d4af37 0%, #f4d03f 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- WhatsApp & Instagram Floating Buttons -->
+    <div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3">
+        <a href="https://wa.me/5511947987584?text=Olá%20Fabiana,%20gostaria%20de%20receber%20o%20catálogo%20VIP%20de%20imóveis%20no%20Tatuapé" 
+           class="floating-btn bg-green-500 text-white rounded-full p-4 flex items-center justify-center w-14 h-14 md:w-auto md:h-auto md:px-5 md:py-3">
+            <i class="fab fa-whatsapp text-xl md:mr-2"></i>
+            <span class="hidden md:inline">Fale com a Fabiana</span>
+        </a>
+        <a href="tel:11947987584" 
+           class="floating-btn bg-blue-600 text-white rounded-full p-4 flex items-center justify-center w-14 h-14">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold text-blue-800">FB</span>
+                <span class="ml-2 text-sm font-medium text-gray-600 hidden md:block">Fabiana Bettoni | CRECI 102916</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#diferenciais" class="text-gray-700 hover:text-blue-600 transition">Diferenciais</a>
+                <a href="#beneficios" class="text-gray-700 hover:text-blue-600 transition">Benefícios</a>
+                <a href="#depoimentos" class="text-gray-700 hover:text-blue-600 transition">Depoimentos</a>
+                <a href="#contato" class="text-gray-700 hover:text-blue-600 transition">Contato</a>
+            </div>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 leading-tight title-font">
+                Imóveis de Alto Padrão no <span class="gradient-text">Tatuapé</span>: <br> Sofisticação, Conforto e Localização Privilegiada
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Receba um catálogo exclusivo com as melhores oportunidades do Tatuapé e invista com segurança e valorização garantida.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://wa.me/5511947987584?text=Olá%20Fabiana,%20gostaria%20de%20receber%20o%20catálogo%20VIP%20de%20imóveis%20no%20Tatuapé" 
+                   class="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 inline-flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Quero meu Catálogo VIP
+                </a>
+                <a href="tel:11947987584" 
+                   class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 inline-flex items-center justify-center">
+                    <i class="fas fa-phone mr-2"></i> Ligar Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciais Section -->
+    <section id="diferenciais" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 title-font">
+                Viva em imóveis pensados para quem <span class="gradient-text">valoriza cada detalhe</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-gray-50 rounded-xl p-6 flex items-start hover:shadow-lg transition-all">
+                    <div class="feature-icon rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <i class="fas fa-umbrella-beach text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Varanda gourmet com vista panorâmica</h3>
+                        <p class="text-gray-600">Aproveite momentos únicos com vista privilegiada da cidade.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-gray-50 rounded-xl p-6 flex items-start hover:shadow-lg transition-all">
+                    <div class="feature-icon rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <i class="fas fa-couch text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Ambientes amplos e integrados</h3>
+                        <p class="text-gray-600">Plantas inteligentes que valorizam cada metro quadrado.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-gray-50 rounded-xl p-6 flex items-start hover:shadow-lg transition-all">
+                    <div class="feature-icon rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <i class="fas fa-swimming-pool text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Estrutura de lazer completa</h3>
+                        <p class="text-gray-600">Piscina, academia, salão de festas e espaços kids.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="bg-gray-50 rounded-xl p-6 flex items-start hover:shadow-lg transition-all">
+                    <div class="feature-icon rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Segurança 24h</h3>
+                        <p class="text-gray-600">Sistemas de monitoramento e portaria eletrônica.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="bg-gray-50 rounded-xl p-6 flex items-start hover:shadow-lg transition-all">
+                    <div class="feature-icon rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <i class="fas fa-building text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Arquitetura de alto padrão</h3>
+                        <p class="text-gray-600">Projetos assinados pelos melhores arquitetos da região.</p>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="bg-gray-50 rounded-xl p-6 flex items-start hover:shadow-lg transition-all">
+                    <div class="feature-icon rounded-full w-12 h-12 flex items-center justify-center mr-4">
+                        <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Localização nobre</h3>
+                        <p class="text-gray-600">Próximo ao Shopping Metrô Tatuapé e Praça Silvio Romero.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Property Images Carousel -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Imóvel no Tatuapé" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-gray-800">Residencial Golden Tatuapé</h3>
+                        <p class="text-gray-600 text-sm">3 quartos | 240m²</p>
+                        <p class="text-blue-600 font-semibold mt-2">R$ 2.500.000</p>
+                    </div>
+                </div>
+                
+                <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Imóvel no Tatuapé" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-gray-800">Edifício Platinum View</h3>
+                        <p class="text-gray-600 text-sm">4 quartos | 320m²</p>
+                        <p class="text-blue-600 font-semibold mt-2">R$ 3.800.000</p>
+                    </div>
+                </div>
+                
+                <div class="property-card bg-white rounded-xl overflow-hidden shadow-md">
+                    <img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Imóvel no Tatuapé" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-gray-800">Jardins do Tatuapé</h3>
+                        <p class="text-gray-600 text-sm">2 quartos | 180m²</p>
+                        <p class="text-blue-600 font-semibold mt-2">R$ 1.950.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefícios Section -->
+    <section id="beneficios" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 title-font">
+                Por que investir com a <span class="gradient-text">Fabiana Bettoni</span>?
+            </h2>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Benefit 1 -->
+                <div class="flex items-start bg-white p-6 rounded-xl hover:shadow-lg transition-all">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Localização nobre</h3>
+                        <p class="text-gray-600">Próximo a Praça Silvio Romero, Shopping Metrô Tatuapé e principais vias de acesso.</p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="flex items-start bg-white p-6 rounded-xl hover:shadow-lg transition-all">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Acabamentos premium</h3>
+                        <p class="text-gray-600">Materiais de primeira linha e plantas exclusivas para seu imóvel.</p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="flex items-start bg-white p-6 rounded-xl hover:shadow-lg transition-all">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Consultoria personalizada</h3>
+                        <p class="text-gray-600">Acompanhamento completo para valorização do seu investimento.</p>
+                    </div>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="flex items-start bg-white p-6 rounded-xl hover:shadow-lg transition-all">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center mr-4">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">Negociação transparente</h3>
+                        <p class="text-gray-600">Processo seguro e todas as etapas claramente explicadas.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Stats -->
+            <div class="mt-16 bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl text-white p-8 max-w-4xl mx-auto contact-card">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="p-4">
+                        <div class="text-3xl font-bold mb-2">+15</div>
+                        <div class="text-sm">Anos de experiência</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl font-bold mb-2">+200</div>
+                        <div class="text-sm">Clientes satisfeitos</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl font-bold mb-2">R$20mi</div>
+                        <div class="text-sm">Em vendas em 2024</div>
+                    </div>
+                    <div class="p-4">
+                        <div class="text-3xl font-bold mb-2">100%</div>
+                        <div class="text-sm">Dos clientes recomendam</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12 title-font">
+                O que dizem nossos <span class="gradient-text">clientes</span>
+            </h2>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 rounded-xl p-8 relative hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Ana Carolina S.</h4>
+                            <p class="text-sm text-gray-500">Compradora - Residencial Golden</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "A Fabiana foi incrível em todo o processo. Entendeu exatamente o que procurávamos e nos apresentou opções perfeitas. O atendimento foi impecável e humano."
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 rounded-xl p-8 relative hover:shadow-lg transition-all">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Carlos & Júlia R.</h4>
+                            <p class="text-sm text-gray-500">Vendedores - Edifício Platinum</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic">
+                        "A Fabiana foi essencial para realizarmos nosso sonho. Conseguiu vender nosso apartamento acima do valor de mercado em tempo recorde. Atendimento humano e profissional!"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-700 to-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 title-font">
+                Oportunidades limitadas – <span class="gradient-text">Reserve seu imóvel agora!</span>
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Entre em contato e garanta seu lugar nos melhores empreendimentos do Tatuapé.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="https://wa.me/5511947987584?text=Olá%20Fabiana,%20gostaria%20de%20saber%20mais%20sobre%20os%20imóveis%20disponíveis%20no%20Tatuapé" 
+                   class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition flex items-center justify-center">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Falar no WhatsApp
+                </a>
+                <a href="tel:11947987584" 
+                   class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-4 px-8 rounded-full text-lg transition flex items-center justify-center">
+                    <i class="fas fa-phone mr-2"></i> Ligar Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section id="contato" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6 title-font">
+                        Receba informações <span class="gradient-text">exclusivas</span>
+                    </h2>
+                    <p class="text-gray-600 mb-6">
+                        Preencha o formulário e receba em primeira mão os lançamentos e oportunidades no Tatuapé.
+                    </p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-xl mb-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Contato Direto</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-phone-alt text-blue-600 mr-3"></i>
+                                <div>
+                                    <p class="text-gray-600">Telefone / WhatsApp</p>
+                                    <a href="tel:11947987584" class="font-semibold text-gray-800 hover:text-blue-600">(11) 94798-7584</a>
+                                </div>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope text-blue-600 mr-3"></i>
+                                <div>
+                                    <p class="text-gray-600">E-mail</p>
+                                    <a href="mailto:fabiana@imoveisbv.com.br" class="font-semibold text-gray-800 hover:text-blue-600">fabiana@imoveisbv.com.br</a>
+                                </div>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-map-marker-alt text-blue-600 mr-3"></i>
+                                <div>
+                                    <p class="text-gray-600">Endereço</p>
+                                    <p class="font-semibold text-gray-800">Rua Lutecia, Vila Carrão - São Paulo/SP</p>
+                                    <p class="text-gray-600">CEP 03423-000</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 rounded-xl p-8 shadow-sm">
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nome*</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">E-mail*</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Telefone*</label>
+                            <input type="tel" id="phone" name="phone" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="interest" class="block text-gray-700 font-medium mb-2">Interesse</label>
+                            <select id="interest" name="interest" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="buy">Comprar</option>
+                                <option value="sell">Vender</option>
+                                <option value="rent">Alugar</option>
+                                <option value="invest">Investir</option>
+                            </select>
+                        </div>
+                        <button type="submit" 
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Fabiana Bettoni</h3>
+                    <p class="text-gray-400">
+                        Especialista em imóveis de alto padrão no Tatuapé, São Paulo. CRECI 102916. Atendimento personalizado nas melhores localizações.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contato</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-phone-alt mr-2"></i> (11) 94798-7584</li>
+                        <li><i class="fas fa-envelope mr-2"></i> fabiana@imoveisbv.com.br</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i> Rua Lutecia, Vila Carrão - SP</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Serviços</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Falar com um Corretor</a></li>
+                        <li><a href="#" class="hover:text-white transition">Buscar Imóveis</a></li>
+                        <li><a href="#" class="hover:text-white transition">Anunciar meu Imóvel</a></li>
+                        <li><a href="#" class="hover:text-white transition">Fichas Cadastrais</a></li>
+                        <li><a href="#" class="hover:text-white transition">Encomendar um Imóvel</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Atendimento</h3>
+                    <p class="text-gray-400 mb-4">
+                        Segunda a Sexta: 9h às 18h<br>
+                        Sábado: 9h às 13h
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://wa.me/5511947987584" class="text-gray-400 hover:text-green-400 text-xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="tel:11947987584" class="text-gray-400 hover:text-blue-400 text-xl">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Fabiana Bettoni Imóveis. Todos os direitos reservados. CRECI 102916</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your server
+            // For this example, we'll just show an alert
+            alert('Obrigado pelo seu interesse! Entraremos em contato em breve.');
+            
+            // Reset the form
+            this.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
